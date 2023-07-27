@@ -23,8 +23,8 @@ module.exports.createThreadController = async (req, res, next) => {
     const { boardName, subject, user, content } = req.body;
     let tagsArray = req.body?.tags || [];
     if (tagsArray.length > 0) {
-      tagsArray = tagsArray.map((e, i) => {
-        return { id: i, title: e };
+      tagsArray = tagsArray.map((e) => {
+        return { title: e };
       });
     }
     const userIP = req.ip;
