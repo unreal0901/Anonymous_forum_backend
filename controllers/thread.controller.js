@@ -30,7 +30,7 @@ module.exports.createThreadController = async (req, res, next) => {
     const userIP = req.ip;
     console.log(userIP);
     const board = await Board.findOne({ name: boardName });
-    if (board?.threadCount) {
+    if (board) {
       board.threadCount = (board?.threadCount || 0) + 1;
       board.save();
     }

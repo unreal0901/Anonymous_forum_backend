@@ -43,6 +43,9 @@ app.use(cookieParser());
 
 const allowedOrigins = [config.get("origin")];
 
+// Uncomment this using development
+// allowedOrigins.concat("http://localhost:3000");
+
 // 3.Cors
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 
