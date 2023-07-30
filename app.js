@@ -41,7 +41,7 @@ app.use(express.json({ limit: "10kb" }));
 // 2. Cookie parser
 app.use(cookieParser());
 
-const allowedOrigins = [config.get("origin")];
+const allowedOrigins = [config.get("origin"), "http://localhost:3000"];
 
 // Uncomment this using development
 // allowedOrigins.concat("http://localhost:3000");
